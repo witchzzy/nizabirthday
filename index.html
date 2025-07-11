@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Niza's Birthday</title>
+  <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0e0e0e;
+      color: white;
+      font-family: 'Staatliches', sans-serif;
+      text-align: center;
+      overflow-x: hidden;
+    }
+    .background {
+      position: fixed;
+      z-index: -1;
+      width: 100vw;
+      height: 100vh;
+      background: url('Black And White Illustrative Western Rodeo Event Night Portrait Poster_20250710_105118_0000.jpg') no-repeat center center;
+      background-size: cover;
+      filter: brightness(0.95);
+      animation: subtleMove 20s infinite alternate ease-in-out;
+    }
+    .content {
+      padding: 3rem 1rem;
+    }
+    h1 {
+      font-size: 3rem;
+      color: #ff2f2f;
+      text-shadow: 0 0 10px #ff2f2f;
+      margin-bottom: 0.5rem;
+      animation: glow 2s ease-in-out infinite alternate;
+    }
+    .info {
+      font-size: 1.2rem;
+      color: white;
+      margin-bottom: 2rem;
+    }
+    .quote {
+      color: #ff2f2f;
+      font-style: italic;
+      font-size: 1.1rem;
+      margin-top: 2rem;
+    }
+    iframe {
+      width: 90%;
+      height: 300px;
+      border: none;
+      margin: 2rem 0;
+      border-radius: 1rem;
+      box-shadow: 0 0 10px #000;
+    }
+    .pinterest {
+      margin: 2rem auto;
+    }
+    .decorative-stars {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      animation: floatStars 6s ease-in-out infinite;
+    }
+    .decorative-stars span {
+      color: #fff;
+      font-size: 2rem;
+    }
+
+    .elements-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+      margin: 3rem 0;
+    }
+
+    .element {
+      width: 60%;
+      max-width: 300px;
+      opacity: 0;
+      transform: translateY(30px);
+      animation: riseUp 1s ease forwards;
+      animation-delay: calc(var(--i) * 0.2s);
+    }
+
+    @keyframes glow {
+      from {
+        text-shadow: 0 0 5px #ff2f2f;
+      }
+      to {
+        text-shadow: 0 0 20px #ff2f2f;
+      }
+    }
+
+    @keyframes subtleMove {
+      from { transform: scale(1); }
+      to { transform: scale(1.02); }
+    }
+
+    @keyframes floatStars {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+
+    @keyframes riseUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media screen and (max-width: 600px) {
+      h1 { font-size: 2.2rem; }
+      .info { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="background"></div>
+  <div class="content">
+    <h1>NIZA'S BIRTHDAY</h1>
+    <div class="info">
+      <p>Coyote ugly theme</p>
+      <p class="decorative-stars"><span>✯</span><span>✯</span><span>✯</span></p>
+      <p style="color: #ff2f2f; font-size: 1.5rem;">9 AGO | 6:00PM</p>
+      <p>Frida's, Decima Plaza</p>
+    </div>
+
+    <div class="elements-container">
+      <img src="recortes/vinyl.png" class="element" style="--i:0;" alt="Vinyl" />
+      <img src="recortes/horseshoe.png" class="element" style="--i:1;" alt="Horseshoe" />
+      <img src="recortes/music_notes.png" class="element" style="--i:2;" alt="Music Notes" />
+      <img src="recortes/decor_lines.png" class="element" style="--i:3;" alt="Decor Lines" />
+      <img src="recortes/bottle.png" class="element" style="--i:4;" alt="Bottle" />
+      <img src="recortes/stars.png" class="element" style="--i:5;" alt="Stars" />
+      <img src="recortes/guitar.png" class="element" style="--i:6;" alt="Guitar" />
+      <img src="recortes/wagon_wheel.png" class="element" style="--i:7;" alt="Wagon Wheel" />
+      <img src="recortes/sheet_music.png" class="element" style="--i:8;" alt="Sheet Music" />
+      <img src="recortes/mountain.png" class="element" style="--i:9;" alt="Mountain" />
+    </div>
+
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3877.0389150539486!2d-90.499898!3d14.6342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8589a1ff53ac8a17%3A0xf3b69b9e2a1c02b0!2sFrida%27s%20Decima%20Plaza!5e0!3m2!1ses-419!2sgt!4v1720610000000"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+
+    <div class="pinterest">
+      <h2 style="color:#fff">Dresscode Moodboard</h2>
+      <iframe src="https://www.pinterest.com/embed/board/YOUR_BOARD_ID_HERE/" height="400" width="80%" style="border:none;"></iframe>
+    </div>
+
+    <div class="quote">
+      "Coyote ugly isn't a place. It's a state of mind!"
+    </div>
+  </div>
+</body>
+</html>
